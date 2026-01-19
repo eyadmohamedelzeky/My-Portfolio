@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import '../constants/colors.dart';
 import '../constants/strings.dart';
 import '../widgets/hover_scale.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ProjectsSection extends StatelessWidget {
   const ProjectsSection({super.key});
@@ -94,7 +96,86 @@ class ProjectsSection extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
+                    if (project["google_play"] != null ||
+                        project["app_store"] != null) ...[
+                      const SizedBox(height: 20),
+                      Wrap(
+                        spacing: 12,
+                        runSpacing: 12,
+                        children: [
+                          if (project["google_play"] != null)
+                            _buildStoreButton(
+                              context,
+                              icon: FontAwesomeIcons.googlePlay,
+                              url: project["google_play"]!,
+                              label: "Google Play",
+                            ),
+                          if (project["app_store"] != null)
+                            _buildStoreButton(
+                              context,
+                              icon: FontAwesomeIcons.appStore,
+                              url: project["app_store"]!,
+                              label: "App Store",
+                            ),
+                        ],
+                      ),
+                    ],
                   ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildStoreButton(
+    BuildContext context, {
+    required IconData icon,
+    required String url,
+    required String label,
+  }) {
+    return HoverScale(
+      builder: (isHovering) => InkWell(
+        onTap: () async {
+          final uri = Uri.parse(url);
+          if (await canLaunchUrl(uri)) {
+            await launchUrl(uri);
+          }
+        },
+        child: AnimatedContainer(
+          duration: const Duration(milliseconds: 200),
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+          decoration: BoxDecoration(
+            color: isHovering ? AppColors.primary : Colors.transparent,
+            borderRadius: BorderRadius.circular(30),
+            border: Border.all(color: AppColors.primary),
+            boxShadow: isHovering
+                ? [
+                    BoxShadow(
+                      color: AppColors.primary.withValues(alpha: 0.3),
+                      blurRadius: 10,
+                      offset: const Offset(0, 4),
+                    ),
+                  ]
+                : [],
+          ),
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Icon(
+                icon,
+                size: 18,
+                color: isHovering ? Colors.white : AppColors.primary,
+              ),
+              const SizedBox(width: 8),
+              Text(
+                label,
+                style: TextStyle(
+                  color: isHovering ? Colors.white : AppColors.primary,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 14,
                 ),
               ),
             ],

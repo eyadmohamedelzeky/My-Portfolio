@@ -242,6 +242,8 @@ class AppStrings {
           ? "• إطلاق تطبيق عقارات يستخدمه أكثر من 1000 مستخدم.\n• بناء نظام صلاحيات (مستخدم، حارس).\n• دمج الإشعارات لتقليل طلبات الدعم بنسبة 30%."
           : "• Launched a real estate app used by 1,000+ users, improving property search speed by 40%.\n• Built a role-based access system ensuring secure access control.\n• Implemented Visitor Invitation and Emergency Request modules.\n• Integrated Push Notifications reducing support requests by 30%.",
       "tech": "Flutter, Cubit, Firebase, Hive, API, Localization",
+      "google_play":
+          "https://play.google.com/store/apps/details?id=com.uis.diyar",
     },
     {
       "title": "U-Track",
@@ -249,6 +251,8 @@ class AppStrings {
           ? "• تحسين أمان تسجيل الدخول لأكثر من 5000 مستخدم.\n• تحسين الاحتفاظ بالمستخدمين بنسبة 20%.\n• دمج إشعارات Firebase."
           : "• Enhanced login security for 5,000+ users with biometric authentication.\n• Improved retention by 20% through multilingual and multi-theme support.\n• Integrated Firebase notifications reducing user drop-off by 15%.",
       "tech": "Flutter, Cubit, Firebase, Hive, API, CI/CD",
+      "google_play":
+          "https://play.google.com/store/apps/details?id=com.uis.uisapprovalsystem&pcampaignid=web_share",
     },
     {
       "title": "U-People",
@@ -256,6 +260,8 @@ class AppStrings {
           ? "• بناء وحدات الرواتب والحضور لأكثر من 500 موظف.\n• تحسين موثوقية المصادقة بنسبة 100%."
           : "• Built salary and attendance modules serving 500+ employees.\n• Improved authentication reliability by 100% using MAC address validation.\n• Optimized API integration speeding up salary data processing by 35%.",
       "tech": "Flutter, Cubit, Firebase, API, Localization",
+      "google_play":
+          "https://play.google.com/store/apps/details?id=com.uis.uismandooob&pcampaignid=web_share",
     },
     {
       "title": "Sam's Décor",
@@ -263,6 +269,8 @@ class AppStrings {
           ? "• تحسين كفاءة الحجز بنسبة 25% مع جدولة المواعيد.\n• دمج إشعارات Firebase."
           : "• Boosted booking efficiency by 25% with Appointment Scheduling functionality.\n• Integrated Firebase Notifications, reducing missed appointments by 40%.",
       "tech": "Flutter, Cubit, Firebase, API",
+      "google_play":
+          "https://play.google.com/store/apps/details?id=com.uis.samsdecorapp&pcampaignid=web_share",
     },
     {
       "title": "Direct Owner App",
@@ -270,6 +278,8 @@ class AppStrings {
           ? "• تمكين 1200+ مستخدم من إدارة الملف الشخصي.\n• تقليل أخطاء API بنسبة 20%.\n• زيادة احتفاظ المستخدمين بنسبة 18%."
           : "• Empowered 1,200+ users with CRUD APIs for profile and promo code management.\n• Cut API errors by 20% and improved feature customization flexibility.\n• Boosted user retention by 18% with enhanced profile personalization.",
       "tech": "Flutter, BLoC, Hive, API, Localization, Maps",
+      "app_store":
+          "https://apps.apple.com/eg/app/direct-owner/id6479305756?l=ar",
     },
     {
       "title": "Mails App",
@@ -284,6 +294,8 @@ class AppStrings {
           ? "• تطوير برنامج ولاء لـ 3000+ عميل.\n• تقليل وقت تحميل المنتجات بنسبة 35%."
           : "• Developed a loyalty program for 3,000+ customers, driving repeat purchases up 20%.\n• Reduced product load time by 35% and achieved a 4.6★ Play Store rating.\n• Designed responsive UI integrated with secure API authentication.",
       "tech": "Flutter, Cubit, Firebase, API, Localization",
+      "google_play":
+          "https://play.google.com/store/apps/details?id=com.appgain.retailgain",
     },
   ];
 }
