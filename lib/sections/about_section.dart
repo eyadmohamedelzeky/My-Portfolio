@@ -7,15 +7,17 @@ class AboutSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 80, horizontal: 20),
-      color: Colors.white,
+      width: double.infinity,
+      color: Theme.of(context).colorScheme.surface,
       child: Column(
         children: [
           Text(
             AppStrings.aboutMe,
             style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-              color: AppColors.textPrimary,
+              color: AppColors.neonCyan,
               fontWeight: FontWeight.bold,
             ),
           ),
@@ -26,7 +28,9 @@ class AboutSection extends StatelessWidget {
               AppStrings.aboutDescription,
               textAlign: TextAlign.center,
               style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                color: AppColors.textSecondary,
+                color: isDark
+                    ? AppColors.textSecondary
+                    : AppColors.lightTextSecondary,
                 height: 1.8,
                 fontSize: 18,
               ),

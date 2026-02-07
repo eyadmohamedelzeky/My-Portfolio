@@ -31,8 +31,8 @@ class _MainSectionState extends State<MainSection> {
     if (context != null) {
       Scrollable.ensureVisible(
         context,
-        duration: const Duration(milliseconds: 800),
-        curve: Curves.easeInOutCubic,
+        duration: const Duration(milliseconds: 1200),
+        curve: Curves.easeInOutQuart,
       );
     }
   }

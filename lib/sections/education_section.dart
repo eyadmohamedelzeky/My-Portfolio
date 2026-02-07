@@ -7,16 +7,17 @@ class EducationSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 80, horizontal: 20),
       width: double.infinity,
-      color: Colors.white,
+      color: Theme.of(context).scaffoldBackgroundColor,
       child: Column(
         children: [
           Text(
             AppStrings.education,
             style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-              color: AppColors.textPrimary,
+              color: Theme.of(context).colorScheme.onSurface,
               fontWeight: FontWeight.bold,
             ),
           ),
@@ -25,10 +26,12 @@ class EducationSection extends StatelessWidget {
             constraints: const BoxConstraints(maxWidth: 800),
             padding: const EdgeInsets.all(30),
             decoration: BoxDecoration(
-              color: AppColors.background,
+              color: Theme.of(context).colorScheme.surface,
               borderRadius: BorderRadius.circular(20),
               boxShadow: const [AppColors.subtleShadow],
-              border: Border.all(color: Colors.grey.withValues(alpha: 0.1)),
+              border: Border.all(
+                color: AppColors.neonCyan.withValues(alpha: 0.3),
+              ),
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -53,7 +56,11 @@ class EducationSection extends StatelessWidget {
                           Text(
                             AppStrings.educationData['degree']!,
                             style: Theme.of(context).textTheme.titleMedium
-                                ?.copyWith(color: AppColors.textSecondary),
+                                ?.copyWith(
+                                  color: isDark
+                                      ? AppColors.textSecondary
+                                      : AppColors.lightTextSecondary,
+                                ),
                           ),
                         ],
                       ),
@@ -61,7 +68,9 @@ class EducationSection extends StatelessWidget {
                     Text(
                       AppStrings.educationData['date']!,
                       style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                        color: AppColors.textLight,
+                        color: isDark
+                            ? AppColors.textLight
+                            : AppColors.lightTextLight,
                         fontWeight: FontWeight.bold,
                       ),
                     ),

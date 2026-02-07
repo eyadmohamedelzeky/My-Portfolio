@@ -48,7 +48,7 @@ class AppStrings {
       educationKey: "Education",
       contactKey: "Contact Me",
       aboutDescriptionKey:
-          "Flutter Developer with 2+ years of experience delivering 10+ cross-platform mobile apps to Google Play and App Store. Skilled in Clean Architecture, BLoC/Cubit, Firebase, and API integration. Improved app performance and load time by up to 35% across multiple projects. Experienced collaborating in Agile teams to ship production-ready apps with 5K+ active users and 4.6★ ratings.",
+          "Flutter Developer with More Than 2+ years of experience delivering 10+ cross-platform mobile apps to Google Play and App Store. Skilled in Clean Architecture, BLoC/Cubit, Firebase, and API integration. Improved app performance and load time by up to 35% across multiple projects. Experienced collaborating in Agile teams to ship production-ready apps with 5K+ active users and 4.6★ ratings.",
 
       // Navigation
       navHomeKey: "Home",
@@ -244,6 +244,7 @@ class AppStrings {
       "tech": "Flutter, Cubit, Firebase, Hive, API, Localization",
       "google_play":
           "https://play.google.com/store/apps/details?id=com.uis.diyar",
+      "app_store": "https://apps.apple.com/us/app/diyar-co/id6751485964",
     },
     {
       "title": "U-Track",
@@ -253,6 +254,7 @@ class AppStrings {
       "tech": "Flutter, Cubit, Firebase, Hive, API, CI/CD",
       "google_play":
           "https://play.google.com/store/apps/details?id=com.uis.uisapprovalsystem&pcampaignid=web_share",
+      "app_store": "https://apps.apple.com/us/app/u-track/id6450457205",
     },
     {
       "title": "U-People",
@@ -262,6 +264,7 @@ class AppStrings {
       "tech": "Flutter, Cubit, Firebase, API, Localization",
       "google_play":
           "https://play.google.com/store/apps/details?id=com.uis.uismandooob&pcampaignid=web_share",
+      "app_store": "https://apps.apple.com/us/app/u-people/id6475875100",
     },
     {
       "title": "Sam's Décor",
@@ -271,6 +274,7 @@ class AppStrings {
       "tech": "Flutter, Cubit, Firebase, API",
       "google_play":
           "https://play.google.com/store/apps/details?id=com.uis.samsdecorapp&pcampaignid=web_share",
+      "app_store": "https://apps.apple.com/us/app/sams-d%C3%A9cor/id6741109223",
     },
     {
       "title": "Direct Owner App",

@@ -11,13 +11,13 @@ class ExperienceSection extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 80, horizontal: 20),
       width: double.infinity,
-      color: AppColors.background,
+      color: Theme.of(context).scaffoldBackgroundColor,
       child: Column(
         children: [
           Text(
             AppStrings.experience,
             style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-              color: AppColors.textPrimary,
+              color: Theme.of(context).colorScheme.onSurface,
               fontWeight: FontWeight.bold,
             ),
           ),
@@ -42,16 +42,19 @@ class ExperienceSection extends StatelessWidget {
     BuildContext context,
     Map<String, String> experience,
   ) {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
     return HoverScale(
       builder: (isHovering) => Card(
         elevation: isHovering ? 4 : 0,
-        color: isHovering ? Colors.blue.shade50 : AppColors.surface,
+        color: isHovering
+            ? Theme.of(context).colorScheme.surface.withValues(alpha: 0.8)
+            : Theme.of(context).colorScheme.surface,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(16),
           side: BorderSide(
             color: isHovering
                 ? AppColors.primary
-                : Colors.grey.withValues(alpha: 0.1),
+                : Theme.of(context).dividerColor.withValues(alpha: 0.1),
             width: isHovering ? 1.5 : 1,
           ),
         ),
@@ -81,14 +84,18 @@ class ExperienceSection extends StatelessWidget {
                           style: Theme.of(context).textTheme.titleLarge
                               ?.copyWith(
                                 fontWeight: FontWeight.bold,
-                                color: AppColors.textPrimary,
+                                color: Theme.of(context).colorScheme.onSurface,
                               ),
                         ),
                         const SizedBox(height: 4),
                         Text(
                           "${experience["company"]} • ${experience["type"]}",
                           style: Theme.of(context).textTheme.titleMedium
-                              ?.copyWith(color: AppColors.textSecondary),
+                              ?.copyWith(
+                                color: isDark
+                                    ? AppColors.textSecondary
+                                    : AppColors.lightTextSecondary,
+                              ),
                         ),
                       ],
                     ),
@@ -96,7 +103,9 @@ class ExperienceSection extends StatelessWidget {
                   Text(
                     experience["date"]!,
                     style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                      color: AppColors.textLight,
+                      color: isDark
+                          ? AppColors.textLight
+                          : AppColors.lightTextLight,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -108,7 +117,9 @@ class ExperienceSection extends StatelessWidget {
               Text(
                 experience["description"]!,
                 style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                  color: AppColors.textSecondary,
+                  color: isDark
+                      ? AppColors.textSecondary
+                      : AppColors.lightTextSecondary,
                   height: 1.6,
                 ),
               ),

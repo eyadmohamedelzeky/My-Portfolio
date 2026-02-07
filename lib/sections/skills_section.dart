@@ -8,16 +8,17 @@ class SkillsSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 80, horizontal: 20),
-      color: AppColors.background,
+      color: Theme.of(context).scaffoldBackgroundColor,
       width: double.infinity,
       child: Column(
         children: [
           Text(
             AppStrings.skills,
             style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-              color: AppColors.textPrimary,
+              color: Theme.of(context).colorScheme.onSurface,
               fontWeight: FontWeight.bold,
             ),
           ),
@@ -26,11 +27,22 @@ class SkillsSection extends StatelessWidget {
             context,
             "Flutter & Mobile",
             AppStrings.flutterSkills,
+            isDark,
           ),
           const SizedBox(height: 30),
-          _buildSkillCategory(context, "Languages", AppStrings.languages),
+          _buildSkillCategory(
+            context,
+            "Languages",
+            AppStrings.languages,
+            isDark,
+          ),
           const SizedBox(height: 30),
-          _buildSkillCategory(context, "Soft Skills", AppStrings.softSkills),
+          _buildSkillCategory(
+            context,
+            "Soft Skills",
+            AppStrings.softSkills,
+            isDark,
+          ),
         ],
       ),
     );
@@ -40,13 +52,16 @@ class SkillsSection extends StatelessWidget {
     BuildContext context,
     String title,
     List<String> skills,
+    bool isDark,
   ) {
     return Column(
       children: [
         Text(
           title,
           style: Theme.of(context).textTheme.titleMedium?.copyWith(
-            color: AppColors.textSecondary,
+            color: isDark
+                ? AppColors.textSecondary
+                : AppColors.lightTextSecondary,
             fontWeight: FontWeight.bold,
           ),
         ),
@@ -55,19 +70,23 @@ class SkillsSection extends StatelessWidget {
           spacing: 12,
           runSpacing: 12,
           alignment: WrapAlignment.center,
-          children: skills.map((skill) => _buildSkillChip(skill)).toList(),
+          children: skills
+              .map((skill) => _buildSkillChip(context, skill))
+              .toList(),
         ),
       ],
     );
   }
 
-  Widget _buildSkillChip(String label) {
+  Widget _buildSkillChip(BuildContext context, String label) {
     return HoverScale(
       builder: (isHovering) => AnimatedContainer(
         duration: const Duration(milliseconds: 200),
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
         decoration: BoxDecoration(
-          color: isHovering ? AppColors.primary : Colors.white,
+          color: isHovering
+              ? AppColors.primary
+              : Theme.of(context).colorScheme.surface,
           borderRadius: BorderRadius.circular(30),
           border: Border.all(
             color: isHovering
@@ -87,7 +106,9 @@ class SkillsSection extends StatelessWidget {
         child: Text(
           label,
           style: TextStyle(
-            color: isHovering ? Colors.white : AppColors.textPrimary,
+            color: isHovering
+                ? Colors.white
+                : Theme.of(context).colorScheme.onSurface,
             fontWeight: FontWeight.w500,
           ),
         ),

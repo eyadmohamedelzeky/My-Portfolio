@@ -10,16 +10,17 @@ class ProjectsSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 80, horizontal: 20),
-      color: Colors.white,
+      color: Theme.of(context).scaffoldBackgroundColor,
       width: double.infinity,
       child: Column(
         children: [
           Text(
             AppStrings.projects,
             style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-              color: AppColors.textPrimary,
+              color: Theme.of(context).colorScheme.onSurface,
               fontWeight: FontWeight.bold,
             ),
           ),
@@ -29,7 +30,7 @@ class ProjectsSection extends StatelessWidget {
             runSpacing: 30,
             alignment: WrapAlignment.center,
             children: AppStrings.projectList.map((project) {
-              return _buildProjectCard(context, project);
+              return _buildProjectCard(context, project, isDark);
             }).toList(),
           ),
         ],
@@ -37,13 +38,19 @@ class ProjectsSection extends StatelessWidget {
     );
   }
 
-  Widget _buildProjectCard(BuildContext context, Map<String, String> project) {
+  Widget _buildProjectCard(
+    BuildContext context,
+    Map<String, String> project,
+    bool isDark,
+  ) {
     return HoverScale(
       builder: (isHovering) => Container(
         width: 350,
         // Removed fixed height to allow content to expand
         decoration: BoxDecoration(
-          color: isHovering ? Colors.blue.shade50 : Colors.white,
+          color: isHovering
+              ? Theme.of(context).colorScheme.surface
+              : Theme.of(context).colorScheme.surface.withValues(alpha: 0.5),
           borderRadius: BorderRadius.circular(20),
           boxShadow: [
             isHovering ? AppColors.itemShadow : AppColors.subtleShadow,
@@ -51,7 +58,7 @@ class ProjectsSection extends StatelessWidget {
           border: Border.all(
             color: isHovering
                 ? AppColors.primary
-                : Colors.grey.withValues(alpha: 0.1),
+                : Theme.of(context).dividerColor.withValues(alpha: 0.1),
             width: isHovering ? 2 : 1,
           ),
         ),
@@ -74,14 +81,16 @@ class ProjectsSection extends StatelessWidget {
                       project["title"]!,
                       style: Theme.of(context).textTheme.titleLarge?.copyWith(
                         fontWeight: FontWeight.bold,
-                        color: AppColors.textPrimary,
+                        color: Theme.of(context).colorScheme.onSurface,
                       ),
                     ),
                     const SizedBox(height: 12),
                     Text(
                       project["description"]!,
                       style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                        color: AppColors.textSecondary,
+                        color: isDark
+                            ? AppColors.textSecondary
+                            : AppColors.lightTextSecondary,
                         height: 1.5,
                       ),
                       // Removed overflow: TextOverflow.fade
