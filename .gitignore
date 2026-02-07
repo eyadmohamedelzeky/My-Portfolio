@@ -29,11 +29,12 @@ migrate_working_dir/
 .pub-cache/
 .pub/
 
-# ❌ تجاهل كل build
-/build/
+# ❌ تجاهل كل ملفات build
+/build/*
 
-# ✅ لكن اسمح برفع build/web
+# ✅ اسمح برفع build/web فقط
 !/build/web/
+!/build/web/**
 
 # Coverage
 /coverage/
