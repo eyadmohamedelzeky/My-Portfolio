@@ -84,6 +84,16 @@ class ProjectsSection extends StatelessWidget {
                         color: Theme.of(context).colorScheme.onSurface,
                       ),
                     ),
+                    if (project["company"] != null) ...[
+                      const SizedBox(height: 4),
+                      Text(
+                        project["company"]!,
+                        style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                          color: AppColors.primary,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ],
                     const SizedBox(height: 12),
                     Text(
                       project["description"]!,

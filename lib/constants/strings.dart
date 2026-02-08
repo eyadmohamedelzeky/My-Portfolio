@@ -19,6 +19,7 @@ class AppStrings {
   static const String educationKey = "education";
   static const String contactKey = "contact";
   static const String aboutDescriptionKey = "aboutDescription";
+  static const String referenceKey = "reference";
 
   // Navigation Keys
   static const String navHomeKey = "navHome";
@@ -58,6 +59,7 @@ class AppStrings {
       navSkillsKey: "Skills",
       navProjectsKey: "Projects",
       navContactKey: "Contact",
+      referenceKey: "Reference",
     },
     'ar': {
       nameKey: "إياد محمد الزكي",
@@ -69,7 +71,7 @@ class AppStrings {
       educationKey: "التعليم",
       contactKey: "تواصل معي",
       aboutDescriptionKey:
-          "مطور فلاتر بخبرة تزيد عن سنتين في تطوير ورفع أكثر من 10 تطبيقات للهواتف الذكية على Google Play و App Store. متمكن من Clean Architecture و BLoC/Cubit و Firebase وتكامل الـ API. قمت بتحسين أداء التطبيقات وسرعة التحميل بنسبة تصل إلى 35٪ في مشاريع متعددة. لدي خبرة في العمل ضمن فرق Agile.",
+          "Flutter Developer بخبرة تزيد عن سنتين في تطوير ورفع أكثر من 10 تطبيقات للهواتف الذكية على Google Play و App Store. متمكن من Clean Architecture و BLoC/Cubit و Firebase وتكامل الـ API. قمت بتحسين أداء التطبيقات وسرعة التحميل بنسبة تصل إلى 35٪ في مشاريع متعددة. لدي خبرة في العمل ضمن فرق Agile.",
 
       // Navigation
       navHomeKey: "الرئيسية",
@@ -79,6 +81,7 @@ class AppStrings {
       navSkillsKey: "المهارات",
       navProjectsKey: "المشاريع",
       navContactKey: "تواصل معي",
+      referenceKey: "مرجع التواصل",
     },
   };
 
@@ -99,6 +102,8 @@ class AppStrings {
       _localizedValues[currentLanguage.name]![contactKey]!;
   static String get aboutDescription =>
       _localizedValues[currentLanguage.name]![aboutDescriptionKey]!;
+  static String get reference =>
+      _localizedValues[currentLanguage.name]![referenceKey]!;
 
   // Navigation Getters
   static String get navHome =>
@@ -121,20 +126,24 @@ class AppStrings {
     if (isArabic) {
       return [
         {
-          "role": "مطور فلاتر",
+          "role": "Flutter Developer",
           "company": "United Integration Solution (UIS)",
           "date": "يناير 2024 - الحالي",
           "type": "في الموقع (دوام كامل)",
           "description":
-              "• بناء وحدات التسجيل والحجز مع ربط الـ API.\n• تطوير خصائص المصادقة وإدارة المستخدمين.\n• استخدام BLoC لإدارة الحالة لضمان القابلية للتوسع.\n• التعاون مع فريق الباك إند وتوصيل التطبيقات للمتاجر.",
+              "• قيادة تطوير تطبيقات جوال متنوعة (عقارات، إدارة شؤون موظفين، تتبع) تخدم أكثر من 5000 مستخدم نشط.\n• تحسين أداء معالجة بيانات الرواتب والـ API بنسبة 35٪، مما عزز سرعة استجابة التطبيقات.\n• تنفيذ أنظمة أمان متقدمة تشمل البصمة والتحقق من الـ MAC Address لضمان موثوقية بنسبة 100٪.\n• بناء معماريات برمجية مرنة باستخدام BLoC و Clean Architecture لضمان سهولة الصيانة والتوسع.",
+          "refName": "م/ علاء إبراهيم",
+          "refPhone": "+201142007746",
         },
         {
-          "role": "مطور فلاتر",
+          "role": "Flutter Developer",
           "company": "Appgain",
           "date": "سبتمبر 2023 - ديسمبر 2023",
           "type": "في الموقع (دوام كامل)",
           "description":
-              "• تطبيق Clean Architecture + DI للمودلية والاختبار.\n• تطوير برنامج الولاء وخصائص إدارة المنتجات.\n• ربط الـ APIs وإدارة الحالة باستخدام BLoC.",
+              "• تطوير تطبيق 'Retail Gain' وحصوله على تقييم 4.6★ على متجر جوجل بلاي.\n• تصميم وتنفيذ نظام ولاء متكامل ساهم في زيادة معدل احتفاظ المستخدمين وتكرار الشراء بنسبة 20٪.\n• تقليل زمن تحميل المنتجات بنسبة 35٪ من خلال تحسين استراتيجيات إدارة الحالة (State Management).",
+          "refName": "م/ محمد محمود",
+          "refPhone": "+201007186959",
         },
       ];
     }
@@ -145,7 +154,9 @@ class AppStrings {
         "date": "Jan 2024 - Present",
         "type": "On-site (Full Time)",
         "description":
-            "• Built unit registration & reservation modules with API integration.\n• Developed authentication & user management features.\n• Used BLoC state management ensuring scalability & responsive design.\n• Collaborated with backend team to define API requirements and delivered apps to Play Store & App Store.",
+            "• Led the development of diverse mobile applications (Real Estate, HRM, Tracking) serving 5,000+ active users.\n• Optimized salary data processing and API integration, achieving a 35% speed improvement across systems.\n• Implemented advanced security measures including biometric authentication and MAC address validation for 100% reliability.\n• Engineered scalable architectures using BLoC and Clean Architecture, ensuring high performance and responsive design.",
+        "refName": "Eng. Alaa Ibrahim",
+        "refPhone": "+201142007746",
       },
       {
         "role": "Flutter Developer",
@@ -153,7 +164,9 @@ class AppStrings {
         "date": "Sep 2023 - Dec 2023",
         "type": "On-site (Full Time)",
         "description":
-            "• Applied Clean Architecture + DI for modularity and testing.\n• Developed loyalty program and product management features.\n• Integrated APIs and managed state with BLoC.",
+            "• Developed the 'Retail Gain' application, achieving a 4.6★ rating on the Google Play Store.\n• Built a comprehensive loyalty program that increased repeat purchases and user retention by 20%.\n• Reduced product load times by 35% through efficient state management and data fetching optimizations.",
+        "refName": "Eng. Mohamed Mahmoud",
+        "refPhone": "+201007186959",
       },
     ];
   }
@@ -180,22 +193,23 @@ class AppStrings {
       ? [
           "فلاتر",
           "دارت",
-          "إدارة الحالة (Cubit, Bloc)",
+          "إدارة الحالة (Cubit, Bloc, Provider)",
           "Clean Architecture",
-          "RESTful APIs",
+          "RESTful APIs (Dio, http)",
           "OOP",
           "Firebase",
-          "قواعد بيانات محلية",
+          "قواعد بيانات محلية (Hive, SQLite)",
           "خرائط جوجل",
           "أنيميشن",
-          "CI/CD",
+          "CI/CD (GitHub Actions, Fastlane)",
+          "اختبار الـ API (Postman)",
           "تجاوب التصميم",
           "تعدد اللغات",
         ]
       : [
           "Flutter",
           "Dart",
-          "State Management (Cubit, Bloc)",
+          "State Management (Cubit, Bloc, Provider)",
           "MVC & Clean Architecture",
           "RESTful APIs (Dio, http)",
           "OOP",
@@ -204,20 +218,35 @@ class AppStrings {
           "Local Databases (Hive, SQLite)",
           "Google Maps",
           "Animations",
-          "CI/CD",
+          "CI/CD (GitHub Actions, Fastlane)",
+          "API Testing (Postman)",
           "Deployment",
           "Responsive UI",
           "Localization",
         ];
 
   static List<String> get languages => isArabic
-      ? ["دارت", "بايثون", "جافا", "C++"]
-      : ["Dart", "Python", "Java", "C++"];
+      ? [
+          "دارت",
+          "بايثون",
+          "جافا",
+          "C++",
+          "Git & GitHub",
+          "Clean Code",
+          "UI/UX Collaboration",
+        ]
+      : [
+          "Dart",
+          "Python",
+          "Java",
+          "C++",
+          "Git & GitHub",
+          "Clean Code",
+          "UI/UX Collaboration",
+        ];
 
   static List<String> get softSkills => isArabic
       ? [
-          "Git & GitHub",
-          "الكود النظيف",
           "تحسين الأداء",
           "Agile & Scrum",
           "حل المشكلات",
@@ -225,11 +254,8 @@ class AppStrings {
           "التعلم السريع",
         ]
       : [
-          "Git & GitHub",
-          "Clean Code",
           "Performance Optimization",
           "Agile & Scrum",
-          "UI/UX Collaboration",
           "Problem Solving",
           "Teamwork",
           "Fast Learning",
@@ -238,6 +264,7 @@ class AppStrings {
   static List<Map<String, String>> get projectList => [
     {
       "title": "Diyar",
+      "company": "United Integration Solution (UIS)",
       "description": isArabic
           ? "• إطلاق تطبيق عقارات يستخدمه أكثر من 1000 مستخدم.\n• بناء نظام صلاحيات (مستخدم، حارس).\n• دمج الإشعارات لتقليل طلبات الدعم بنسبة 30%."
           : "• Launched a real estate app used by 1,000+ users, improving property search speed by 40%.\n• Built a role-based access system ensuring secure access control.\n• Implemented Visitor Invitation and Emergency Request modules.\n• Integrated Push Notifications reducing support requests by 30%.",
@@ -248,6 +275,7 @@ class AppStrings {
     },
     {
       "title": "U-Track",
+      "company": "United Integration Solution (UIS)",
       "description": isArabic
           ? "• تحسين أمان تسجيل الدخول لأكثر من 5000 مستخدم.\n• تحسين الاحتفاظ بالمستخدمين بنسبة 20%.\n• دمج إشعارات Firebase."
           : "• Enhanced login security for 5,000+ users with biometric authentication.\n• Improved retention by 20% through multilingual and multi-theme support.\n• Integrated Firebase notifications reducing user drop-off by 15%.",
@@ -258,6 +286,7 @@ class AppStrings {
     },
     {
       "title": "U-People",
+      "company": "United Integration Solution (UIS)",
       "description": isArabic
           ? "• بناء وحدات الرواتب والحضور لأكثر من 500 موظف.\n• تحسين موثوقية المصادقة بنسبة 100%."
           : "• Built salary and attendance modules serving 500+ employees.\n• Improved authentication reliability by 100% using MAC address validation.\n• Optimized API integration speeding up salary data processing by 35%.",
@@ -268,6 +297,7 @@ class AppStrings {
     },
     {
       "title": "Sam's Décor",
+      "company": "United Integration Solution (UIS)",
       "description": isArabic
           ? "• تحسين كفاءة الحجز بنسبة 25% مع جدولة المواعيد.\n• دمج إشعارات Firebase."
           : "• Boosted booking efficiency by 25% with Appointment Scheduling functionality.\n• Integrated Firebase Notifications, reducing missed appointments by 40%.",
@@ -278,6 +308,7 @@ class AppStrings {
     },
     {
       "title": "Direct Owner App",
+      "company": "United Integration Solution (UIS)",
       "description": isArabic
           ? "• تمكين 1200+ مستخدم من إدارة الملف الشخصي.\n• تقليل أخطاء API بنسبة 20%.\n• زيادة احتفاظ المستخدمين بنسبة 18%."
           : "• Empowered 1,200+ users with CRUD APIs for profile and promo code management.\n• Cut API errors by 20% and improved feature customization flexibility.\n• Boosted user retention by 18% with enhanced profile personalization.",
@@ -287,6 +318,7 @@ class AppStrings {
     },
     {
       "title": "Mails App",
+      "company": "United Integration Solution (UIS)",
       "description": isArabic
           ? "• تتبع طلبات الوقود في الوقت الفعلي لأكثر من 2000 مستخدم.\n• تقليل أخطاء التوصيل بنسبة 30%."
           : "• Enabled real-time fuel order tracking for 2,000+ users using Google Maps.\n• Reduced delivery errors by 30% via API optimization.\n• Improved order completion speed by 25% with route optimization.",
@@ -294,6 +326,7 @@ class AppStrings {
     },
     {
       "title": "Retail Gain",
+      "company": "Appgain.io",
       "description": isArabic
           ? "• تطوير برنامج ولاء لـ 3000+ عميل.\n• تقليل وقت تحميل المنتجات بنسبة 35%."
           : "• Developed a loyalty program for 3,000+ customers, driving repeat purchases up 20%.\n• Reduced product load time by 35% and achieved a 4.6★ Play Store rating.\n• Designed responsive UI integrated with secure API authentication.",

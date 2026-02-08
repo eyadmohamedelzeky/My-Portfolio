@@ -36,7 +36,6 @@ class _HeaderSectionState extends State<HeaderSection> {
                     ? MainAxisAlignment.end
                     : MainAxisAlignment.spaceBetween,
                 children: [
-                  // ... (NavBar logic remains the same but container color fixed above)
                   if (!isMobile) _buildDesktopNavBar(),
                   Row(
                     mainAxisSize: MainAxisSize.min,
@@ -226,39 +225,6 @@ class _HeaderSectionState extends State<HeaderSection> {
       ),
     );
   }
-
-  // Widget _buildSocialButton({required IconData icon, required String url}) {
-  //   return HoverScale(
-  //     builder: (isHovering) => InkWell(
-  //       onTap: () async {
-  //         final uri = Uri.parse(url);
-  //         if (await canLaunchUrl(uri)) {
-  //           await launchUrl(uri);
-  //         }
-  //       },
-  //       child: AnimatedContainer(
-  //         duration: const Duration(milliseconds: 200),
-  //         padding: const EdgeInsets.all(12),
-  //         decoration: BoxDecoration(
-  //           color: isHovering
-  //               ? Colors.white
-  //               : Colors.white.withValues(alpha: 0.1),
-  //           borderRadius: BorderRadius.circular(50),
-  //           border: Border.all(
-  //             color: isHovering
-  //                 ? AppColors.primary
-  //                 : Colors.white.withValues(alpha: 0.2),
-  //           ),
-  //         ),
-  //         child: Icon(
-  //           icon,
-  //           color: isHovering ? AppColors.primary : Colors.white,
-  //           size: 24,
-  //         ),
-  //       ),
-  //     ),
-  //   );
-  // }
 }
 
 // Sequential Typewriter Widget
