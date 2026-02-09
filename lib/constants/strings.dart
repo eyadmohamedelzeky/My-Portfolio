@@ -126,7 +126,7 @@ class AppStrings {
     if (isArabic) {
       return [
         {
-          "role": "Flutter Developer",
+          "role": "Flutter Developer",   
           "company": "United Integration Solution (UIS)",
           "date": "يناير 2024 - الحالي",
           "type": "في الموقع (دوام كامل)",
