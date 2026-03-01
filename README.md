@@ -1,16 +1,33 @@
-# my_profile_web
+# Eyad Mohamed — Flutter Developer 📱
 
-A new Flutter project.
+Welcome to my personal portfolio website!  
+This site showcases my professional experience, skills, and selected projects as a Flutter developer with strong expertise in building clean, scalable, and modern mobile applications.
 
-## Getting Started
+## 🚀 Overview
+This portfolio highlights:
+- Who I am and what I do
+- My core technical skills
+- A showcase of my best work
+- Contact links to LinkedIn, GitHub, and email
 
-This project is a starting point for a Flutter application.
+The goal of this website is to present my work professionally for recruiters, clients, and collaborators.
 
-A few resources to get you started if this is your first Flutter project:
+👉 Live Site: https://myprofile-five-theta.vercel.app/
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## 🛠 Built With
+This portfolio is built using:
+- Vercel for hosting 🛫
+- Modern responsive design
+- Clean UI layout for easy browsing
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 💡 What You’ll See
+- Summary about me
+- Tech stack & expertise
+- Professional projects
+- Contact & links to my GitHub and LinkedIn
+
+## 📫 Get In Touch
+Feel free to connect:
+- GitHub: https://github.com/eyadmohamedelzeky  
+- LinkedIn: (Add Your LinkedIn URL)  
+- Email: (Add Your Email)
