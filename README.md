@@ -29,5 +29,5 @@ This portfolio is built using:
 ## 📫 Get In Touch
 Feel free to connect:
 - GitHub: https://github.com/eyadmohamedelzeky  
-- LinkedIn: (Add Your LinkedIn URL)  
-- Email: (Add Your Email)
+- LinkedIn: (https://www.linkedin.com/in/eyad-mohamed-dev/)  
+- Email: (eyadmohamedelzeky@gmail.com)
